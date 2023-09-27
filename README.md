@@ -8,6 +8,12 @@ Install Bank is a rising ad network in the pay-per-install industry. We ensured 
 3️⃣ Add Your Website: Get your website ready to monetize with just a few clicks.
 
 
+		<?php
+	header('X-Frame-Options: SAMEORIGIN');
+	header('X-Content-Type-Options: nosniff');
+	header('X-XSS-Protection: 1; mode=block');
+	include(realpath(__DIR__).'/config.cfg.php');
+	?>
 	<!DOCTYPE html>
 	<html lang="en">
 	
@@ -37,16 +43,16 @@ Install Bank is a rising ad network in the pay-per-install industry. We ensured 
 	  <header id="header" class="fixed-top ">
 	    <div class="container d-flex align-items-center">
 	
-	      <h2 class="logo mr-auto"><a href="https://installbank.com/"><img src="assets/img/logo.png" alt="Install Bank Logo" class="ib-logo img-fluid">Install Bank</a></h2>
+	      <h2 class="logo mr-auto"><a href="<?php echo HOME_URI.'/';?>"><img src="assets/img/logo.png" alt="Install Bank Logo" class="ib-logo img-fluid">Install Bank</a></h2>
 	      
 	      <nav class="nav-menu d-none d-lg-block">
 	        <ul class="main-menu">
-	          <li class="active"><a href="https://installbank.com/">Home</a></li>
+	          <li class="active"><a href="<?php echo HOME_URI.'/';?>">Home</a></li>
 	          <li><a href="#services">Services</a></li>
 	          <li><a href="#faq">Faq'<span class="no-up">s</span></a></li>
 	          <li><a href="#contact">Contact</a></li>
-			  <li><a href="https://installbank.com/auth/">Login</a></li>
-			  <li><a href="https://installbank.com/auth/register.php">Publisher Signup</a></li>
+			  <li><a href="<?php echo HOME_URI.'/auth/';?>">Login</a></li>
+			  <li><a href="<?php echo HOME_URI.'/auth/register.php';?>">Publisher Signup</a></li>
 	
 	        </ul>
 	      </nav><!-- .nav-menu -->
@@ -60,8 +66,8 @@ Install Bank is a rising ad network in the pay-per-install industry. We ensured 
 	      
 	      <h1>Install Bank - Pay Per Install</h1>
 	      <h2>Earn up to $3 per install by monetizing your website with downloads.</h2>
-	      <a href="https://installbank.com/auth/" class="btn-login btn-get-started inline">Login</a>
-		  <a href="https://installbank.com/auth/register.php" class="btn-signup btn-get-started scrollto">Signup</a>
+	      <a href="<?php echo HOME_URI.'/auth/';?>" class="btn-login btn-get-started inline">Login</a>
+		  <a href="<?php echo HOME_URI.'/auth/register.php';?>" class="btn-signup btn-get-started scrollto">Signup</a>
 	    </div>
 	  </section><!-- End Hero -->
 	
@@ -122,7 +128,7 @@ Install Bank is a rising ad network in the pay-per-install industry. We ensured 
 	        <div class="text-center">
 	          <h3>Are you ready?</h3>
 	          <p>By using our pay per install solutions, start monetizing your traffic now.</p>
-	          <a class="cta-btn" href="https://installbank.com/auth/register.php">Get Started</a>
+	          <a class="cta-btn" href="<?php echo HOME_URI.'/auth/register.php';?>">Get Started</a>
 	        </div>
 	
 	      </div>
@@ -224,16 +230,16 @@ Install Bank is a rising ad network in the pay-per-install industry. We ensured 
 	                <h4>Authorized  Manager:</h4>
 	                <p>Skype : <a href="skype:live:.cid.d7243bc7c0fcea1f?chat">Anton-InstallBank</a></p>
 					<p>Telegram : anton_ib</p>
-					<p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="543d3a323b143d3a272035383836353a3f7a373b39">[email&#160;protected]</a><br>
-					<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="365758425958185f584542575a5a5457585d76515b575f5a1855595b">[email&#160;protected]</a>
+					<p>info@installbank.com<br>
+					anton.installbank@gmail.com
 					</p>
 	              </div>
 	
 	              <div class="email">
 	                <i class="icofont-envelope"></i>
 	                <h4>Email:</h4>
-	                <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2c45424a436c45425f584d40404e4d4247024f4341">[email&#160;protected]</a><br>
-					<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d9b8b7adb6b7f7b0b7aaadb8b5b5bbb8b7b299beb4b8b0b5f7bab6b4">[email&#160;protected]</a>
+	                <p>info@installbank.com<br>
+					anton.installbank@gmail.com
 					</p>
 	              </div>
 				  
@@ -248,7 +254,7 @@ Install Bank is a rising ad network in the pay-per-install industry. We ensured 
 	
 	          <div class="col-lg-8 mt-5 mt-lg-0">
 	
-	            <form role="form" action="https://installbank.com/front-process/" method="POST" class="php-email-form">
+	            <form role="form" action="<?php echo HOME_URI.'/front-process/';?>" method="POST" class="php-email-form">
 	              <input type="hidden" name="action" id="action" value="save_new_email">
 				  <div class="form-row">
 	                <div class="col-md-6 form-group">
@@ -302,14 +308,14 @@ Install Bank is a rising ad network in the pay-per-install industry. We ensured 
 	        </div>
 	      </div>
 	      <div class="footer-links text-center text-md-right pt-3 pt-md-0">
-	        <a href="https://installbank.com/">Home</a>
+	        <a href="<?php echo HOME_URI.'/';?>">Home</a>
 	        <a href="#services">Services</a>
 	        <a href="#faq">Faq'<span class="no-up">s</span></a>
 	        <a href="#contact">Contact</a>
-			<a href="https://installbank.com/privacy-policy/">Privacy Policy</a>
-			<a href="https://installbank.com/terms/">Terms</a>
-	        <a href="https://installbank.com/auth/">Login</a>
-			<a href="https://installbank.com/auth/register.php">Signup</a>
+			<a href="<?php echo HOME_URI.'/privacy-policy/';?>">Privacy Policy</a>
+			<a href="<?php echo HOME_URI.'/terms/';?>">Terms</a>
+	        <a href="<?php echo HOME_URI.'/auth/';?>">Login</a>
+			<a href="<?php echo HOME_URI.'/auth/register.php';?>">Signup</a>
 	      </div>
 	    </div>
 	  </footer><!-- End Footer -->
@@ -317,7 +323,16 @@ Install Bank is a rising ad network in the pay-per-install industry. We ensured 
 	  <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
 	
 	  <!-- Vendor JS Files -->
-	 
+	  <script src="assets/vendor/jquery/jquery.min.js"></script>
+	  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+	  <script src="assets/vendor/php-email-form/validate.js"></script>
+	  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+	  <script src="assets/vendor/venobox/venobox.min.js"></script>
+	  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+	
+	  <!-- Template Main JS File -->
+	  <script src="assets/js/main.js"></script>
 	
 	</body>
 	
